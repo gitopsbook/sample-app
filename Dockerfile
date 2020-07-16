@@ -6,3 +6,4 @@ RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -ldflags="-w -s" -o /dist/sam
 FROM scratch
 
 COPY --from=builder /dist/sample-app /app/sample-app
+ENTRYPOINT ["/app/sample-app"]
