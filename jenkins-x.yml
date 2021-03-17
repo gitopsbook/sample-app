@@ -1,0 +1,9 @@
+buildPack: go
+pipelineConfig:
+ pipelines:
+  release: 
+   build:
+    steps:
+    - sh: echo "Hello App" 
+      name: Printing  Hello App  
+
